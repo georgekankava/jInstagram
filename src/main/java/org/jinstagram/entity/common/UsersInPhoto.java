@@ -26,26 +26,26 @@ import com.google.gson.annotations.SerializedName;
  */
 public class UsersInPhoto {
 
-	@SerializedName("user")
-	private User user;
+    @SerializedName("user")
+    private User user;
 
-	@SerializedName("position")
-	private GridPosition position;
+    @SerializedName("position")
+    private GridPosition position;
 
-	public User getUser() {
-		return user;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
 
-	public GridPosition getPosition() {
-		return position;
-	}
+    public GridPosition getPosition() {
+        return position;
+    }
 
-	public void setPosition(GridPosition position) {
-		this.position = position;
-	}
+    public void setPosition(GridPosition position) {
+        this.position = position;
+    }
 
 }

@@ -13,17 +13,17 @@ import java.util.Map;
  * Represents an HTTP Response.
  */
 public class Response {
-	private static final String EMPTY_RESPONSE = "";
+    private static final String EMPTY_RESPONSE = "";
 
-	private String body;
+    private String body;
 
-	private int code;
+    private int code;
 
-	private Map<String, String> headers;
+    private Map<String, String> headers;
 
-	private InputStream stream;
-	
-	private String url;
+    private InputStream stream;
+    
+    private String url;
 
     Response(HttpURLConnection connection) throws IOException {
         try {
@@ -40,72 +40,72 @@ public class Response {
     }
 
     public String getURL() {
-		return url;
-	}
+        return url;
+    }
 
-	private String parseBodyContents() {
-		return StreamUtils.getStreamContents(getStream());
-	}
+    private String parseBodyContents() {
+        return StreamUtils.getStreamContents(getStream());
+    }
 
-	private Map<String, String> parseHeaders(HttpURLConnection conn) {
-		Map<String, String> headers = new HashMap<String, String>();
+    private Map<String, String> parseHeaders(HttpURLConnection conn) {
+        Map<String, String> headers = new HashMap<String, String>();
 
-		for (String key : conn.getHeaderFields().keySet()) {
-			headers.put(key, conn.getHeaderFields().get(key).get(0));
-		}
+        for (String key : conn.getHeaderFields().keySet()) {
+            headers.put(key, conn.getHeaderFields().get(key).get(0));
+        }
 
-		return headers;
-	}
+        return headers;
+    }
 
-	private boolean wasSuccessful() {
-		return (getCode() >= 200) && (getCode() < 400);
-	}
+    private boolean wasSuccessful() {
+        return (getCode() >= 200) && (getCode() < 400);
+    }
 
-	/**
-	 * Obtains the HTTP Response body
-	 * 
-	 * @return response body
-	 */
-	public String getBody() {
-		return (body != null) ? body : parseBodyContents();
-	}
+    /**
+     * Obtains the HTTP Response body
+     * 
+     * @return response body
+     */
+    public String getBody() {
+        return (body != null) ? body : parseBodyContents();
+    }
 
-	/**
-	 * Obtains the meaningful stream of the HttpUrlConnection, either
-	 * inputStream or errorInputStream, depending on the status code
-	 * 
-	 * @return input stream / error stream
-	 */
-	public InputStream getStream() {
-		return stream;
-	}
+    /**
+     * Obtains the meaningful stream of the HttpUrlConnection, either
+     * inputStream or errorInputStream, depending on the status code
+     * 
+     * @return input stream / error stream
+     */
+    public InputStream getStream() {
+        return stream;
+    }
 
-	/**
-	 * Obtains the HTTP status code
-	 * 
-	 * @return the status code
-	 */
-	public int getCode() {
-		return code;
-	}
+    /**
+     * Obtains the HTTP status code
+     * 
+     * @return the status code
+     */
+    public int getCode() {
+        return code;
+    }
 
-	/**
-	 * Obtains a {@link Map} containing the HTTP Response Headers
-	 * 
-	 * @return headers
-	 */
-	public Map<String, String> getHeaders() {
-		return headers;
-	}
+    /**
+     * Obtains a {@link Map} containing the HTTP Response Headers
+     * 
+     * @return headers
+     */
+    public Map<String, String> getHeaders() {
+        return headers;
+    }
 
-	/**
-	 * Obtains a single HTTP Header value, or null if undefined
-	 * 
-	 * @param headerName name of the header
-	 * 
-	 * @return header value or null
-	 */
-	public String getHeader(String headerName) {
-		return headers.get(headerName);
-	}
+    /**
+     * Obtains a single HTTP Header value, or null if undefined
+     * 
+     * @param headerName name of the header
+     * 
+     * @return header value or null
+     */
+    public String getHeader(String headerName) {
+        return headers.get(headerName);
+    }
 }

@@ -6,16 +6,16 @@ import java.util.Map;
  * An exception class to deal with a bad request.
  */
 public class InstagramBadRequestException extends InstagramException {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * No-exception constructor. Used when there is no original exception
-	 *
-	 * @param message message explaining what went wrong
-	 */
-	public InstagramBadRequestException(String message) {
-		super(message);
-	}
+    /**
+     * No-exception constructor. Used when there is no original exception
+     *
+     * @param message message explaining what went wrong
+     */
+    public InstagramBadRequestException(String message) {
+        super(message);
+    }
 
     /**
      * No-exception constructor with response headers.
@@ -40,23 +40,23 @@ public class InstagramBadRequestException extends InstagramException {
     }
 
 
-	/**
-	 * Default constructor
-	 *
-	 * @param message message explaining what went wrong
-	 * @param e original exception
-	 */
-	public InstagramBadRequestException(String message, Exception e) {
-		super(message, e);
-	}
+    /**
+     * Default constructor
+     *
+     * @param message message explaining what went wrong
+     * @param e original exception
+     */
+    public InstagramBadRequestException(String message, Exception e) {
+        super(message, e);
+    }
 
-	/**
-	 * Constructor with response headers
-	 * @param message message explaining what went wrong
-	 * @param e original exception
-	 * @param responseHeaders the headers obtained from Instagram http response
-	 */
-	public InstagramBadRequestException(String message, Exception e, Map<String, String> responseHeaders) {
-		super(message, e, responseHeaders);
-	}
+    /**
+     * Constructor with response headers
+     * @param message message explaining what went wrong
+     * @param e original exception
+     * @param responseHeaders the headers obtained from Instagram http response
+     */
+    public InstagramBadRequestException(String message, Exception e, Map<String, String> responseHeaders) {
+        super(message, e, responseHeaders);
+    }
 }

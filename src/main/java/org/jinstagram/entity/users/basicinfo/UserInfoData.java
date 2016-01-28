@@ -3,104 +3,104 @@ package org.jinstagram.entity.users.basicinfo;
 import com.google.gson.annotations.SerializedName;
 
 public class UserInfoData {
-	@SerializedName("bio")
-	private String bio;
+    @SerializedName("bio")
+    private String bio;
 
-	@SerializedName("counts")
-	private Counts counts;
+    @SerializedName("counts")
+    private Counts counts;
 
-	@SerializedName("first_name")
-	private String firstName;
+    @SerializedName("first_name")
+    private String firstName;
 
-	@SerializedName("id")
-	private String id;
+    @SerializedName("id")
+    private String id;
 
-	@SerializedName("last_name")
-	private String lastName;
+    @SerializedName("last_name")
+    private String lastName;
 
-	@SerializedName("profile_picture")
-	private String profilePicture;
+    @SerializedName("profile_picture")
+    private String profilePicture;
 
-	@SerializedName("username")
-	private String username;
+    @SerializedName("username")
+    private String username;
 
-	@SerializedName("full_name")
-	private String fullName;
+    @SerializedName("full_name")
+    private String fullName;
 
-	@SerializedName("website")
-	private String website;
+    @SerializedName("website")
+    private String website;
 
-	public String getUsername() {
-		return username;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public String getId() {
-		return id;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setLast_name(String last_name) {
-		this.lastName = last_name;
-	}
+    public void setLast_name(String last_name) {
+        this.lastName = last_name;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getProfilePicture() {
-		return profilePicture;
-	}
+    public String getProfilePicture() {
+        return profilePicture;
+    }
 
-	public void setProfilePicture(String profilePicture) {
-		this.profilePicture = profilePicture;
-	}
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
+    }
 
-	public String getBio() {
-		return bio;
-	}
+    public String getBio() {
+        return bio;
+    }
 
-	public void setBio(String bio) {
-		this.bio = bio;
-	}
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
-	public String getWebsite() {
-		return website;
-	}
+    public String getWebsite() {
+        return website;
+    }
 
-	public void setWebsite(String website) {
-		this.website = website;
-	}
+    public void setWebsite(String website) {
+        this.website = website;
+    }
 
-	public Counts getCounts() {
-		return counts;
-	}
+    public Counts getCounts() {
+        return counts;
+    }
 
-	public void setCounts(Counts counts) {
-		this.counts = counts;
-	}
+    public void setCounts(Counts counts) {
+        this.counts = counts;
+    }
 
-	public String getFullName() {
-		return fullName;
-	}
+    public String getFullName() {
+        return fullName;
+    }
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
     @Override
     public String toString() {
